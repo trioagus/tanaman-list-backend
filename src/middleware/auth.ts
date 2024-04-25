@@ -8,14 +8,6 @@ interface UserPayload {
   role: string;
 }
 
-declare global {
-  namespace Express {
-    interface Request {
-      user?: UserPayload;
-    }
-  }
-}
-
 export const validateToken = (
   req: Request,
   res: Response,
@@ -23,7 +15,7 @@ export const validateToken = (
 ) => {
   const token = req.headers.authorization?.split(" ")[1];
   if (!token) {
-    return res.status(401).json({ message: "Unauthorized" });
+    return res.status(401).json({ message: "Missing token. Please provide a valid token." });
   }
 
   try {
@@ -32,6 +24,7 @@ export const validateToken = (
     req.user = user;
     next();
   } catch (error) {
-    return res.status(401).json({ message: "Unauthorized" });
+    console.error("Error validating token:", error);
+    return res.status(401).json({ message: "Invalid token. Please provide a valid token." });
   }
 };
