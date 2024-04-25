@@ -8,14 +8,14 @@ export function sanitizeInput(input: string) {
   // Mengganti satu tanda kutip dengan dua tanda kutip
   let sanitizedInput = input.replace(/'/g, "''");
 
-  // Menghilangkan tag HTML dan atributnya
-  sanitizedInput = removeHtmlComments(sanitizedInput);
-
   // Menghilangkan potensi serangan XSS dan injection
   sanitizedInput = sanitizedInput.replace(
     /(\b)(on\S+)(\s*)=|javascript|(<\s*)(\/*)script/gi,
     ""
   );
+
+  // Menghilangkan tag HTML dan atributnya
+  sanitizedInput = removeHtmlComments(sanitizedInput);
 
   // Menghapus spasi kosong di awal dan akhir string
   const trimmedInput = sanitizedInput.trim();
@@ -33,7 +33,7 @@ function removeHtmlComments(input: string) {
   let previous;
   do {
     previous = input;
-    input = input.replace(/<!--|--!?>/g, "");
+    input = input.replace(/<!--[\s\S]*?-->/g, "");
   } while (input !== previous);
   return input;
 }
