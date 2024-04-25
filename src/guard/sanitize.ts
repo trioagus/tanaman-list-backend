@@ -8,8 +8,8 @@ export function sanitizeInput(input: string) {
   // Mengganti satu tanda kutip dengan dua tanda kutip
   let sanitizedInput = input.replace(/'/g, "''");
 
-  // Menghilangkan tag HTML
-  sanitizedInput = sanitizedInput.replace(/<[^>]*>/g, "");
+  // Menghilangkan tag HTML dan atributnya
+  sanitizedInput = sanitizedInput.replace(/<[^>]+>/g, "");
 
   // Menghilangkan potensi serangan XSS dan injection
   sanitizedInput = sanitizedInput.replace(

@@ -333,3 +333,6 @@
 {"level":"info","message":"sukses delete tanaman","service":"user-service"}
 {"level":"info","message":"sukses update tanaman","service":"user-service"}
 {"affectedRows":1,"changedRows":1,"fieldCount":0,"info":"Rows matched: 1  Changed: 1  Warnings: 0","insertId":0,"level":"info","message":"sukses update tanaman","serverStatus":2,"service":"user-service","warningStatus":0}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
