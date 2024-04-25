@@ -66,9 +66,7 @@ export class AuthService {
       const token = jwt.sign(payload, secret);
 
       return {
-        id: user.id,
-        username: user.username,
-        role: user.role,
+        user,
         token,
       };
     } catch (error: any) {
