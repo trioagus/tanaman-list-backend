@@ -9,7 +9,7 @@ export function sanitizeInput(input: string) {
   let sanitizedInput = input.replace(/'/g, "''");
 
   // Menghilangkan tag HTML dan atributnya
-  sanitizedInput = sanitizedInput.replace(/<[^>]+>/g, "");
+  sanitizedInput = removeHtmlComments(sanitizedInput);
 
   // Menghilangkan potensi serangan XSS dan injection
   sanitizedInput = sanitizedInput.replace(
@@ -21,4 +21,19 @@ export function sanitizeInput(input: string) {
   const trimmedInput = sanitizedInput.trim();
 
   return trimmedInput;
+}
+
+/**
+ * Menghapus semua komentar HTML dari string input.
+ *
+ * @param {string} input String input yang akan dibersihkan dari komentar HTML.
+ * @returns {string} String input yang sudah dibersihkan dari komentar HTML.
+ */
+function removeHtmlComments(input: string) {
+  let previous;
+  do {
+    previous = input;
+    input = input.replace(/<!--|--!?>/g, "");
+  } while (input !== previous);
+  return input;
 }
