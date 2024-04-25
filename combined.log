@@ -420,3 +420,6 @@
 {"level":"info","message":"sukses buat table user","service":"user-service"}
 {"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
 {"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
