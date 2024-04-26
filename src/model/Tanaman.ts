@@ -13,6 +13,7 @@ export class Tanaman {
                 jenis_id VARCHAR(36) NOT NULL,
                 size VARCHAR(255) NOT NULL,
                 stock INT NOT NULL,
+                code VARCHAR(255) NOT NULL,
                 price INT NOT NULL,
                 FOREIGN KEY (jenis_id) REFERENCES Jenis(id)
             )`;
@@ -26,7 +27,7 @@ export class Tanaman {
 
   static async createTanaman(tanaman: TanamanType): Promise<void> {
     try {
-      const sql = `INSERT INTO tanaman (id, name, latin, jenis_id, size, stock, price) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+      const sql = `INSERT INTO tanaman (id, name, latin, jenis_id, size, stock, code, price) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
       await (
         await connection
       ).query(sql, [
@@ -36,6 +37,7 @@ export class Tanaman {
         tanaman.jenis_id,
         tanaman.size,
         tanaman.stock,
+        tanaman.code,
         tanaman.price,
       ]);
 
@@ -55,6 +57,7 @@ export class Tanaman {
             tanaman.latin,
             tanaman.size,
             tanaman.stock,
+            tanaman.code,
             tanaman.price,
             jenis.name AS jenis_name
         FROM tanaman
@@ -76,6 +79,7 @@ export class Tanaman {
           tanaman.latin,
           tanaman.size,
           tanaman.stock,
+          tanaman.code,
           tanaman.price,
           jenis.name AS jenis_name
       FROM tanaman
@@ -91,13 +95,14 @@ export class Tanaman {
 
   static async updateTanaman(tanaman: TanamanType): Promise<any> {
     try {
-        const sql = `UPDATE tanaman SET name = ?, latin = ?, jenis_id = ?, size = ?, stock = ?, price = ? WHERE id = ?`;
+        const sql = `UPDATE tanaman SET name = ?, latin = ?, jenis_id = ?, size = ?, stock = ?, code = ?, price = ? WHERE id = ?`;
         const [rows] = await (await connection).query(sql, [
             tanaman.name,
             tanaman.latin,
             tanaman.jenis_id,
             tanaman.size,
             tanaman.stock,
+            tanaman.code,
             tanaman.price,
             tanaman.id,
         ]);

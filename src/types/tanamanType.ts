@@ -5,5 +5,6 @@ export type TanamanType = {
   jenis_id: string;
   size: string;
   stock: number;
+  code: string;
   price: number;
 };
