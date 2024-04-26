@@ -1,6 +1,5 @@
 import express from "express";
 import { AuthController } from "../controller/auth.controller";
-import { validateToken } from "../middleware/auth";
 import { rateLimit } from "express-rate-limit";
 
 const limiter = rateLimit({
@@ -14,4 +13,4 @@ export const authRouter = express.Router();
 
 authRouter.post("/register", limiter, AuthController.Register);
 authRouter.post("/login", limiter, AuthController.Login);
-authRouter.post("/logout", limiter, validateToken, AuthController.Logout);
+authRouter.post("/logout", limiter, AuthController.Logout);
