@@ -1,6 +1,7 @@
 import { Jenis } from "../model/Jenis";
 import { jenisValidation } from "../validation/Jenis.validation";
 import { jenisType } from "../types/jenisType";
+import { logger } from "../logger/info";
 
 export class JenisService {
     static async createJenis(name: string): Promise<any> {
@@ -12,8 +13,10 @@ export class JenisService {
         try {
           const jenisData: jenisType = { name }; 
           const jenis = await Jenis.createJenis(jenisData);
+          logger.info("Jenis created successfully");
           return jenis;
         } catch (error: any) {
+          logger.error(`Error creating Jenis: ${error.message}`);
           throw new Error(`Error creating Jenis: ${error.message}`);
         }
       }

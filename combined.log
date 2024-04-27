@@ -108,3 +108,45 @@
 {"level":"info","message":"Sukses membuat jenis","service":"user-service"}
 {"level":"info","message":"Sukses memperbarui jenis","service":"user-service"}
 {"level":"info","message":"Sukses menghapus jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}
+{"level":"error","message":"Error creating Jenis: Error: \"name\" is required","service":"user-service"}
+{"level":"error","message":"Error creating Jenis: Error: \"name\" is required","service":"user-service"}
+{"level":"info","message":"sukses buat tanaman","service":"user-service"}
+{"level":"info","message":"sukses buat tanaman","service":"user-service"}
+{"level":"error","message":"Error creating Jenis: Error: \"name\" length must be at least 5 characters long","service":"user-service"}
+{"level":"info","message":"Sukses membuat jenis","service":"user-service"}
+{"level":"info","message":"Jenis created successfully","service":"user-service"}
+{"level":"info","message":{"affectedRows":1,"changedRows":0,"fieldCount":0,"info":"","insertId":0,"serverStatus":2,"warningStatus":0},"service":"user-service"}
+{"level":"info","message":"sukses buat table user","service":"user-service"}
+{"level":"info","message":"Sukses membuat tabel jenis","service":"user-service"}
+{"level":"info","message":"sukses buat table tanaman","service":"user-service"}

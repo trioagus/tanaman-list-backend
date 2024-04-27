@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { JenisService } from "../service/jenis.service";
+import { logger } from "../logger/info";
 
 export class JenisController {
   static async getAllJenis(req: Request, res: Response) {
@@ -23,8 +24,10 @@ export class JenisController {
     const { name } = req.body;
     try {
       const Jenis = await JenisService.createJenis(name);
+      logger.info(Jenis);
       res.status(201).json({ Jenis });
     } catch (error) {
+      logger.error(`Error creating Jenis: ${error}`);
       res.status(500).json({ message: "Server Error" });
     }
   }

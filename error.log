@@ -2,3 +2,6 @@
 {"level":"error","message":"Error creating user table: ","service":"user-service"}
 {"level":"error","message":"Error creating user table: ","service":"user-service"}
 {"level":"error","message":"Error creating user table: ","service":"user-service"}
+{"level":"error","message":"Error creating Jenis: Error: \"name\" is required","service":"user-service"}
+{"level":"error","message":"Error creating Jenis: Error: \"name\" is required","service":"user-service"}
+{"level":"error","message":"Error creating Jenis: Error: \"name\" length must be at least 5 characters long","service":"user-service"}
