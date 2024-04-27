@@ -4,8 +4,7 @@ import { JenisService } from "../service/jenis.service";
 export class JenisController {
   static async getAllJenis(req: Request, res: Response) {
     try {
-      const Jenis = await JenisService.getAllJenis();
-      res.status(200).json({ Jenis });
+      res.status(200).json(await JenisService.getAllJenis());
     } catch (error) {
       res.status(500).json({ message: "Server Error" });
     }
@@ -14,8 +13,7 @@ export class JenisController {
   static async getJenisById(req: Request, res: Response) {
     const { id } = req.params;
     try {
-      const Jenis = await JenisService.getJenisById(id);
-      res.status(200).json({ Jenis });
+      res.status(200).json(await JenisService.getJenisById(id));
     } catch (error) {
       res.status(500).json({ message: "Server Error" });
     }
